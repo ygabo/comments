@@ -1,8 +1,9 @@
-<%= simple_form_for(@post) do |f| %>
+<%= simple_form_for(@comment) do |f| %>
   <%= f.error_notification %>
-
+  <%= params[:post_id] %>
   <div class="form-inputs">
-  <%= f.input :body %>
+    <%= f.input :post_id, :as => :hidden %>
+    <%= f.input :body %>
   </div>
 
   <div class="form-actions">

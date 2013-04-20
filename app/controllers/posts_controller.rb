@@ -14,6 +14,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
+    @comments = @post.comments
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,12 +25,15 @@ class PostsController < ApplicationController
   # GET /posts/new
   # GET /posts/new.json
   def new
+    if user_signed_in?
     @post = Post.new
-    @post.user_id = current_user.id
 
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @post }
+    end
+    else
+      redirect_to new_session_path(User)
     end
   end
 
@@ -42,6 +46,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(params[:post])
+    @post.user_id = current_user.id
 
     respond_to do |format|
       if @post.save

@@ -14,4 +14,4 @@
 
 <br/>
 <br/>
-<p><%= link_to 'New Comment', new_comment_path(post_id: @post.id) %></p>
+<p><%= link_to 'New Comment', new_comment_path, post_id: @post.id %></p>

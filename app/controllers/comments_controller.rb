@@ -25,7 +25,6 @@ class CommentsController < ApplicationController
   # GET /comments/new.json
   def new
     @comment = Comment.new
-    @comment.user_id = current_user.id
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,6 +41,7 @@ class CommentsController < ApplicationController
   # POST /comments.json
   def create
     @comment = Comment.new(params[:comment])
+    @comment.user_id = current_user.id
 
     respond_to do |format|
       if @comment.save
