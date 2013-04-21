@@ -6,7 +6,7 @@
 <% if @post.user_id == current_user.id %>
   <div>
     <%= link_to 'edit', edit_post_path(@post) %> <br/>
-    <%= link_to 'new comment', new_comment_path(post_id: @post.id) %>
+    <%= link_to 'comment', new_comment_path(post_id: @post.id) %>
   </div>
 <% end %>
 

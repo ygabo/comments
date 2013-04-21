@@ -29,6 +29,7 @@ class CommentsController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @comment }
+      format.js
     end
   end
 
@@ -74,7 +75,12 @@ class CommentsController < ApplicationController
   # DELETE /comments/1.json
   def destroy
     @comment = current_user.comments.find(params[:id])
-    @comment.destroy
+    if @comment.has_children?
+      @comment.body = ""
+      @comment.deleted = true
+    else
+      @comment.destroy
+    end
 
     respond_to do |format|
       format.html { redirect_to comments_url }

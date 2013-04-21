@@ -33,7 +33,7 @@ body {
   //background-color: transparent;
   color: #DDD !important;
   padding: 8px;
-  margin: 8px;
+  margin: 4px;
   -webkit-border-radius: 6px 6px 6px 6px;
   -moz-border-radius: 6px 6px 6px 6px;
   border-radius: 6px 6px 6px 6px;
@@ -45,10 +45,10 @@ body {
   //background-color: transparent;
   //color: #DDD !important;
   padding: 8px;
-  margin: 8px;
-  -webkit-border-radius: 0 0 6px 6px;
-  -moz-border-radius: 0 0 6px 6px;
-  border-radius: 0 0 6px 6px;
+  margin: 4px;
+  -webkit-border-radius: 6px 6px 6px 6px;
+  -moz-border-radius: 6px 6px 6px 6px;
+  border-radius: 6px 6px 6px 6px;
 }
 
 #reply-button {
