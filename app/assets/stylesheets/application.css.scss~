@@ -28,8 +28,9 @@ body {
   font: normal x-small verdana,arial,helvetica,sans-serif;
 }
 
-#comment_body{
+#comment_body {
   padding: 6px;
+  padding-top:0px;
 }
 
 #comment-block-0{

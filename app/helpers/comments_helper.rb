@@ -4,4 +4,8 @@ module CommentsHelper
       render(comment)
     end.join.html_safe
   end
+
+  def delete_this_comment(comment)
+    comment.destroy
+  end
 end

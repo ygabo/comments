@@ -1,4 +1,4 @@
-<%= simple_form_for(@comment) do |f| %>
+<%= simple_form_for(@comment, html: { :remote=>true } ) do |f| %>
   <%= f.error_notification %>
   <div class="form-inputs">
     <%= f.hidden_field :parent_id %>
@@ -7,6 +7,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, :value => "Submit", class: "btn btn-primary btn-mini" %>
+    <%= f.button :submit, :value => "Submit", class: "btn btn-primary" %>
+    <%= link_to_function "cancel", "$('#new_comment').remove()", class: "btn btn-mini" %>
   </div>
 <% end %>

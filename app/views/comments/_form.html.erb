@@ -7,6 +7,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, :value => "Submit", class: "btn btn-primary btn-mini" %>
+    <%= f.button :submit, :value => "Submit", class: "btn btn-primary" %>
+    <%= link_to_function "cancel", "$('#new_comment').remove()", class: "btn btn-danger btn-mini" %>
   </div>
 <% end %>

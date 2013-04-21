@@ -1,0 +1,5 @@
+<% if !@comment.has_children? %>
+  $("<%="#comment_body_#{com_id}" %>").remove();
+<% else %>
+  $("<%="#comment_body_#{com_id}" %>").html("<div id='comment_body'><i><small>deleted</i></small></div>");
+<% end %>

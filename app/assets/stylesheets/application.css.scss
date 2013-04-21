@@ -28,8 +28,9 @@ body {
   font: normal x-small verdana,arial,helvetica,sans-serif;
 }
 
-#comment_body{
+#comment_body {
   padding: 6px;
+  padding-top:0px;
 }
 
 #comment-block-0{
@@ -38,9 +39,9 @@ body {
   color: #DDD !important;
   padding: 4px 0px 4px 4px;
   margin:  4px 0px 0px 4px;
-  -webkit-border-radius: 4px 4px 4px 0px;
-  -moz-border-radius: 4px 4px 4px 0px;
-  border-radius: 4px 4px 4px 0px;
+  -webkit-border-radius: 4px 4px 4px 2px;
+  -moz-border-radius: 4px 4px 4px 2px;
+  border-radius: 4px 4px 4px 2px;
 }
 
 #comment-block-1{
@@ -50,9 +51,9 @@ body {
   //color: #DDD !important;
   padding: 4px 0px 8px 4px;
   margin:  4px 0px 0px 4px;
-  -webkit-border-radius: 4px 4px 4px 0px;
-  -moz-border-radius: 4px 4px 4px 0px;
-  border-radius: 4px 4px 4px 0px;
+  -webkit-border-radius: 4px 4px 4px 2px;
+  -moz-border-radius: 4px 4px 4px 2px;
+  border-radius: 4px 4px 4px 2px;
 }
 
 .actions {

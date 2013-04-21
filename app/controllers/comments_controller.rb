@@ -76,9 +76,11 @@ class CommentsController < ApplicationController
   # DELETE /comments/1.json
   def destroy
     @comment = current_user.comments.find(params[:id])
+    com_id = @comment.id
     if @comment.has_children?
       @comment.body = ""
       @comment.deleted = true
+      @comment.save
     else
       @comment.destroy
     end
@@ -86,6 +88,7 @@ class CommentsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to comments_url }
       format.json { head :no_content }
+      format.js { render :layout => false, :locals => {:com_id => com_id} }
     end
   end
 end
