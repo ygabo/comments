@@ -12,5 +12,7 @@
 
 
 <div id="comments" class="row-fluid">
-  <%= nested_messages @comments.arrange(:order => :created_at) %>
+  <div class="span7">
+    <%= nested_messages @comments.arrange(:order => :created_at) %>
+  </div>
 </div>

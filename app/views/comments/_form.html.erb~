@@ -1,13 +1,12 @@
 <%= simple_form_for(@comment) do |f| %>
   <%= f.error_notification %>
-  <%= params[:post_id] %>
   <div class="form-inputs">
     <%= f.hidden_field :parent_id %>
     <%= f.hidden_field :post_id, :value => params[:post_id] %>
-    <%= f.input :body, :as => :text, :input_html => {:rows => "3"}%>
+    <%= f.input :body, :as => :text, :input_html => {:rows => "3"},:label => false%>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, :value => "Submit", class: "btn btn-primary btn-mini" %>
   </div>
 <% end %>

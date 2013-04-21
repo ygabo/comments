@@ -1,0 +1,3 @@
+$("#new_comment").remove();
+
+$("<%="#comment_children_" + @comment.parent_id.to_s%>").insert( "<%= j render(@comment) %>");

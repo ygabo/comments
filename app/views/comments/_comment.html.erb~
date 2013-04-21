@@ -1,5 +1,7 @@
 <div class="message" id=<%="comment-block-#{comment.depth % 2} "%> >
+  <div id="comment_body">
   <%= comment.body %>
+  </div>
   <div class="actions" id=<%="reply-button-#{comment.id}" %> >
     <% if user_signed_in? %>
       <%= link_to "reply", new_comment_path({post_id: comment.post_id, :parent_id => comment}), remote: :true, class: "reply_button" %>
@@ -9,5 +11,7 @@
       <% end %>
     <% end %>
   </div>
-  <%= nested_messages comment.children.arrange(:order => :created_at) %>
+  <div id=<%="comment_children_#{comment.id}"%>>
+    <%= nested_messages comment.children.arrange(:order => :created_at) %>
+  </div>
 </div>

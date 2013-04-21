@@ -1,1 +1,1 @@
-$("#reply-button-<%=#{@comment.parent_id}%>").remove();
+$("<%="#reply-button-" + @comment.parent_id.to_s%>").after( "<%= j render("form") %>");

@@ -3,7 +3,7 @@
 <p><%= @post.body %></p>
 
 <br/>
-<% if @post.user_id == current_user.id %>
+<% if user_signed_in? && @post.user_id == current_user.id %>
   <div>
     <%= link_to 'edit', edit_post_path(@post) %> <br/>
     <%= link_to 'comment', new_comment_path(post_id: @post.id) %>
@@ -12,5 +12,7 @@
 
 
 <div id="comments" class="row-fluid">
+  <div class="span7">
   <%= nested_messages @comments.arrange(:order => :created_at) %>
+  </div>
 </div>

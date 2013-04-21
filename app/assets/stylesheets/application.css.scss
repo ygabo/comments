@@ -28,15 +28,19 @@ body {
   font: normal x-small verdana,arial,helvetica,sans-serif;
 }
 
+#comment_body{
+  padding: 6px;
+}
+
 #comment-block-0{
   background-color: #666 !important;
   //background-color: transparent;
   color: #DDD !important;
-  padding: 8px;
-  margin: 4px;
-  -webkit-border-radius: 4px 4px 4px 4px;
-  -moz-border-radius: 4px 4px 4px 4px;
-  border-radius: 4px 4px 4px 4px;
+  padding: 4px 0px 4px 4px;
+  margin:  4px 0px 0px 4px;
+  -webkit-border-radius: 4px 4px 4px 0px;
+  -moz-border-radius: 4px 4px 4px 0px;
+  border-radius: 4px 4px 4px 0px;
 }
 
 #comment-block-1{
@@ -44,16 +48,17 @@ body {
   color: #555 !important;
   //background-color: transparent;
   //color: #DDD !important;
-  padding: 8px;
-  margin: 4px;
-  -webkit-border-radius: 4px 4px 4px 4px;
-  -moz-border-radius: 4px 4px 4px 4px;
-  border-radius: 4px 4px 4px 4px;
+  padding: 4px 0px 8px 4px;
+  margin:  4px 0px 0px 4px;
+  -webkit-border-radius: 4px 4px 4px 0px;
+  -moz-border-radius: 4px 4px 4px 0px;
+  border-radius: 4px 4px 4px 0px;
 }
 
-#reply-button {
+.actions {
   font: normal x-small verdana,arial,helvetica,sans-serif;
   font-weight: bold;
+  padding-left:4px
 }
 
 .nested_messages {
