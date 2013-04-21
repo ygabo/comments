@@ -1,0 +1,17 @@
+<%if comment.depth == 0%>
+  <% my_class="message span6" %>
+<%else%>
+  <% my_class="message" %>
+<% end %>
+
+<div class="message" id=<%="comment-block-#{comment.depth % 2} "%> >
+  <%= comment.body %>
+  <div class="actions" id="reply-button">
+    <%= link_to "reply", new_comment_path(:parent_id => comment) %>
+    <% if current_user.id == comment.user_id %>
+      <%= link_to "edit", edit_comment_path %>
+      <%= link_to "delete", comment, :confirm => "Are you sure?", :method => :delete %>
+    <% end %>
+  </div>
+  <%= nested_messages comment.children.arrange(:order => :created_at) %>
+</div>

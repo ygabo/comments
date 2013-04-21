@@ -27,3 +27,39 @@
 body {
   font: normal x-small verdana,arial,helvetica,sans-serif;
 }
+
+#comment-block-0{
+  background-color: #666 !important;
+  //background-color: transparent;
+  color: #DDD !important;
+  padding: 8px;
+  margin: 8px;
+  -webkit-border-radius: 6px 6px 6px 6px;
+  -moz-border-radius: 6px 6px 6px 6px;
+  border-radius: 6px 6px 6px 6px;
+}
+
+#comment-block-1{
+  background-color: #aaa !important;
+  color: #555 !important;
+  //background-color: transparent;
+  //color: #DDD !important;
+  padding: 8px;
+  margin: 8px;
+  -webkit-border-radius: 6px 6px 6px 6px;
+  -moz-border-radius: 6px 6px 6px 6px;
+  border-radius: 6px 6px 6px 6px;
+}
+
+#reply-button {
+  font: normal x-small verdana,arial,helvetica,sans-serif;
+  font-weight: bold;
+}
+
+.nested_messages {
+  margin-left: 30px;
+}
+
+.nested_messages .nested_messages .nested_messages .nested_messages {
+  margin-left: 0;
+}

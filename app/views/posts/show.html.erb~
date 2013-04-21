@@ -5,18 +5,12 @@
 <br/>
 <% if @post.user_id == current_user.id %>
   <div>
-    <%= link_to 'Edit', edit_post_path(@post) %> |
-    <%= link_to 'Back', posts_path %>
-  </div>
-<% end %>
-<br/>
-<% @comments.each do |comment| %>
-  <div>
-    <p><%= comment.body %></p>
-    <div><%= link_to 'reply', new_comment_path({post_id: @post.id, parent_id: comment.id}) %></div>
+    <%= link_to 'edit', edit_post_path(@post) %> <br/>
+    <%= link_to 'new comment', new_comment_path(post_id: @post.id) %>
   </div>
 <% end %>
 
-<br/>
-<br/>
-<p><%= link_to 'New Comment', new_comment_path(post_id: @post.id) %></p>
+
+<div id="comments" class="row-fluid">
+  <%= nested_messages @comments.arrange(:order => :created_at) %>
+</div>

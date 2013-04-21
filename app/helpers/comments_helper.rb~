@@ -1,0 +1,8 @@
+module CommentsHelper
+  def nested_messages(comments)
+    comments.map do |comment, sub_comments|
+      content_tag(:div, render(comment))#, :id=>"comment-block-#{comment.depth+1 % 2}")
+      # + content_tag(:div, nested_messages(sub_comments), :class => "nested_messages")
+    end.join.html_safe
+  end
+end
