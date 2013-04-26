@@ -1,3 +1,7 @@
 $("#new_comment").remove();
 
-$("<%="#comment_children_" + @comment.parent_id.to_s%>").append( "<%= j render(@comment) %>");
+<% if @comment.parent_id %>
+	$("<%="#comment_children_" + @comment.parent_id.to_s%>").append( "<%= j render(@comment) %>");
+<% else %>
+	$("#comments").prepend( "<%= j render(@comment) %>");
+<% end %>

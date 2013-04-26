@@ -19,7 +19,7 @@
       <% end %>
     </div>
     <div id=<%="comment_children_#{comment.id}"%>>
-      <%= nested_messages comment.children.arrange(:order => :created_at) %>
+      <%= nested_messages comment.children %>
     </div>
   </div>
 <% else %>

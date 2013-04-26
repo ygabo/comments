@@ -4,15 +4,13 @@
 
 <br/>
 <% if user_signed_in? && @post.user_id == current_user.id %>
-  <div>
-    <%= link_to 'edit', edit_post_path(@post) %> <br/>
-    <%= link_to 'comment', new_comment_path(post_id: @post.id) %>
+  <div id="post_controls">
+    <%= link_to 'Edit', edit_post_path(@post) %> <br/>
+    <%= link_to 'New Comment', new_comment_path(post_id: @post.id), remote: true %>
   </div>
 <% end %>
 
 
 <div id="comments" class="row-fluid">
-  <div class="span7">
     <%= nested_messages @comments.arrange(:order => :created_at) %>
-  </div>
 </div>

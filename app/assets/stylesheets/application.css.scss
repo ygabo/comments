@@ -16,9 +16,9 @@
   background-color: #eee;
   padding: 20px;
   margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
-  -webkit-border-radius: 0 0 6px 6px;
-  -moz-border-radius: 0 0 6px 6px;
-  border-radius: 0 0 6px 6px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -moz-border-radius:  3px 3px 3px 3px;
+  border-radius:  3px 3px 3px 3px;
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
   box-shadow: 0 1px 2px rgba(0,0,0,.15);
@@ -33,27 +33,24 @@ body {
   padding-top:0px;
 }
 
-#comment-block-0{
+#comment-block-1{
   background-color: #666 !important;
-  //background-color: transparent;
   color: #DDD !important;
-  padding: 4px 0px 4px 4px;
+  padding: 3px 3px 3px 3px;
   margin:  4px 0px 0px 4px;
-  -webkit-border-radius: 4px 4px 4px 2px;
-  -moz-border-radius: 4px 4px 4px 2px;
-  border-radius: 4px 4px 4px 2px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -moz-border-radius:  3px 3px 3px 3px;
+  border-radius:  3px 3px 3px 3px;
 }
 
-#comment-block-1{
+#comment-block-0{
   background-color: #aaa !important;
   color: #555 !important;
-  //background-color: transparent;
-  //color: #DDD !important;
-  padding: 4px 0px 8px 4px;
+  padding: 3px 3px 3px 3px;
   margin:  4px 0px 0px 4px;
-  -webkit-border-radius: 4px 4px 4px 2px;
-  -moz-border-radius: 4px 4px 4px 2px;
-  border-radius: 4px 4px 4px 2px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -moz-border-radius:  3px 3px 3px 3px;
+  border-radius:  3px 3px 3px 3px;
 }
 
 .actions {
